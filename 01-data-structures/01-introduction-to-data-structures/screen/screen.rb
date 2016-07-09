@@ -18,12 +18,10 @@ class Screen
   # Insert a Pixel at x, y
   def insert(pixel, x, y)
     coordinates = []
-    pixels = []
     coordinates << x
     coordinates << y
-    pixels << pixel
     @pixel_coordinates << coordinates
-    @inserted_pixels << pixels
+    @inserted_pixels << pixel
   end
 
   def at(x, y)
