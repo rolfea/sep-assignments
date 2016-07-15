@@ -44,6 +44,17 @@ class LinkedList
     puts @tail.data
   end
 
+  
+  def return_single(element_location)
+    current_node = @head
+    counter = 1
+    until counter == element_location
+      current_node = current_node.next
+      counter += 1
+    end
+    current_node.next
+  end
+
   # This method removes `node` from the list and must keep the rest of the list intact.
   def delete(node)
     # removes head

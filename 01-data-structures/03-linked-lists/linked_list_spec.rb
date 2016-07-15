@@ -76,17 +76,17 @@ RSpec.describe LinkedList, type: Class do
       expect(llist.head).to eq n2
     end
   end
-  
-  # describe "#remove_front" do
-  #   it "removes the node to the front of the linked list" do
-  #     llist.add_to_front(n1)
-  #     expect(llist.head).to eq n1
-  #     llist.add_to_front(n2)
-  #     expect(llist.head).to eq n2
-  #     llist.remove_front
-  #     expect(llist.head).to eq n1
-  #     llist.remove_front
-  #     expect(llist.head).to eq nil
-  #   end
-  # end
+
+  describe "#remove_front" do
+    it "removes the node to the front of the linked list" do
+      llist.add_to_front(n1)
+      expect(llist.head).to eq n1
+      llist.add_to_front(n2)
+      expect(llist.head).to eq n2
+      llist.remove_front
+      expect(llist.head).to eq n1
+      llist.remove_front
+      expect(llist.head).to eq nil
+    end
+  end
 end
