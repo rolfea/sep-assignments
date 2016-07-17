@@ -44,9 +44,10 @@ class LinkedList
     puts @tail.data
   end
 
-  
+
   def return_single(element_location)
     current_node = @head
+    # use 0
     counter = 1
     until counter == element_location
       current_node = current_node.next
@@ -104,6 +105,7 @@ class LinkedList
   end
 
   def advance_through_list_until_next_is(target)
+    # instead just return this
     @current_node = @head
     until @current_node.next == target
       @current_node = @current_node.next
