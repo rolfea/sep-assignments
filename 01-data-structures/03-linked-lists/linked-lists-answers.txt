@@ -1,0 +1,18 @@
+1. If my understanding of a cache is correct, which is that it is a chunk of memory that is more immediately available
+that the main memory (the same of RAM?), then data the exhibits spatial locality can
+more often take advantage of the memory cache than data that does not, because the proximity
+lends itself to being found in the cache.
+
+2. Comparing adding 10,000 items to an array versus a linked list reveals that
+an array is much faster. This makes intuitive sense on some level because it seems
+like the physical task of setting up adjacent memory versus memory that is located throughout
+non-adjacent positions would be more efficient.
+When I ran my benchmark tests using the Benchmark.bmbm method, I got the following results:
+  adding 10,000 items: Array was 8.32*10**-4 seconds and Linked List was 9 seconds
+
+I'm having trouble running some of the benchmark tests because I don't know a way to efficiently name 10,000 nodes
+for the linked list to then pass to the delete functions. Rather than rework my methods to use counters, which
+I think might affect the benchmark tests, I'll talk to Cyle about this in our meeting.
+
+Regardless, it seems like the arrays are much faster in terms of accessing the data. The trade off of
+speed of use versus efficient management with large sizes of memory is more clear now.
