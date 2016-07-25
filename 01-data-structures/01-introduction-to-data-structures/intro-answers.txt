@@ -1,0 +1,16 @@
+1. The structure for the line is an array. Accessing the information within it
+will require the same programmatic interactions as would manipulating an array
+within whatever language the developer is using.
+
+The second structure is to arrays set up in parallel to one another.
+Again, any interactions with the information require use of array methods.
+A limitation in this case is that if the developer adds or deletes from one array,
+the other must also be altered in kind or the data structure will no longer reflect
+the information is has been built to represent.
+
+2. Searching through the arrays would involve looping through the data and using
+a conditional statement to find a match.From there, one would consult the corresponding
+array's index to collect all of the information needed.
+
+3. A set of user names and passwords could be set up into parallel arrays. Movies
+and their play time or an item-price database for a store would also work.

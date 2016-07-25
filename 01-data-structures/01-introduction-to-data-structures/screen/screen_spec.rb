@@ -34,5 +34,4 @@ RSpec.describe Screen, type: Class do
       expect(p).to eq nil
     end
   end
-
 end

@@ -11,6 +11,32 @@ class Pixel
 
 
   def initialize(red, green, blue, x, y)
+    if red < 0
+      @red = 0
+    elsif red > 255
+      @red = 255
+    else
+      @red = red
+    end
+
+    if green < 0
+      @green = 0
+    elsif green > 255
+      @green = 255
+    else
+      @green = green
+    end
+
+    if blue < 0
+      @blue = 0
+    elsif blue > 255
+      @blue = 255
+    else
+      @blue = blue
+    end
+
+    @x = x
+    @y = y
   end
 
   private
