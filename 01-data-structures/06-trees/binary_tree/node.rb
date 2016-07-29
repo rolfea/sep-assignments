@@ -7,7 +7,7 @@ class Node
   def initialize(title, rating)
     @title = title
     @rating = rating
-    @left = left
-    @right = right
+    @left = nil
+    @right = nil
   end
 end
