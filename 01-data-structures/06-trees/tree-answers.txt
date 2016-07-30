@@ -1,0 +1,22 @@
+1.
+Min-Heap Results:
+  Hillary's America: 5
+  Mulholland Drive: 82
+  The Room: 33
+  Inception: 86
+  Eternal Sunshine of the Spotless Mind: 93
+  12 Monkeys: 88
+  Brazil: 98
+Binary Search Tree Results:
+  Inception: 86
+  The Room: 33
+  Eternal Sunshine of the Spotless Mind: 93
+  Hillary's America: 5
+  Mulholland Drive: 82
+  12 Monkeys: 88
+  Brazil: 98
+In both cases it's somewhat of a challenge to visualize the data-structure when it
+is represented as a list. In the case of the heap, you begin to see a tendency of higher
+numbers to occupy the bottom of the list.
+
+2.
