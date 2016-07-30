@@ -1,5 +1,4 @@
 include RSpec
-
 require_relative 'binary_search_tree.rb'
 
 RSpec.describe BinarySearchTree, type: Class do
@@ -17,7 +16,7 @@ RSpec.describe BinarySearchTree, type: Class do
   let (:brazil) { Node.new("Brazil", 98) }
   let (:taxi_driver) { Node.new("Taxi Driver", 99) }
   let (:ink) { Node.new("Ink", 100) }
-  let (:samurai) {Node.new("Samurai", 100) }
+  let (:samurai) {Node.new("Seven Samurai", 100) }
 
   describe "#initialize(root)" do
     it "creates a new instance of a binary search tree with a root" do
