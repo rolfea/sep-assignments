@@ -156,7 +156,7 @@ RSpec.describe BinarySearchTree, type: Class do
 
   describe "#printf()" do
     it "prints a breadth-first representation of the tree on a single line" do
-      expected_output = "Inception: 86\nThe Room: 33\nEternal Sunshine of the Spotless Mind: 93\nHillary's America: 5\nMulholland Drive: 82\n12 Monkeys: 88\nBrazil: 98"
+      expected_output = "Inception: 86\nThe Room: 33\nEternal Sunshine of the Spotless Mind: 93\nHillary's America: 5\nMulholland Drive: 82\n12 Monkeys: 88\nBrazil: 98\n"
       tree.insert(root, the_room)
       tree.insert(root, hillary)
       tree.insert(root, mulholland_drive)

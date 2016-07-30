@@ -73,18 +73,24 @@ class BinarySearchTree
   end
 
   # Recursive Breadth First Search
-  def printf(children=nil)
+  def printf
     queue = [@root]
-    unless queue == nil
-      queue.each do |node|
-        if node.left != nil
-          queue << node.left
-        elsif node.right != nil
-          queue << node.right
-        end
-        queue.delete_at[0]
+    returned_string = ""
+
+    until queue.empty?
+      temp_root = queue.shift
+
+      unless temp_root.left == nil
+        queue << temp_root.left
       end
+      unless temp_root.right == nil
+        queue << temp_root.right
+      end
+
+      returned_string << "#{temp_root.title}: #{temp_root.rating}\n"
     end
+
+    puts returned_string
   end
 
   def find_min(root)
