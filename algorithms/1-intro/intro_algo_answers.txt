@@ -1,0 +1,56 @@
+1.
+  a.)
+  DEF MAKE_AN_OMELETTE
+    HEAT pan on stove
+    CRACK eggs into mixing bowl
+    ADD milk TO bowl
+    REPEAT
+      whisk eggs
+    UNTIL eggs bubbly
+    ADD butter TO pan
+    IF butter completely melted
+      ADD mixed eggs to pan
+      REPEAT
+        tilt and turn pan
+      UNTIL pan covered entirely
+    END IF
+    IF mixed eggs not runny
+      ADD filling
+      FOLD egg
+    END IF
+    SET COUNTER to 0
+    WHILE COUNTER less than 31
+      COUNTER + 1
+    END WHILE
+    REMOVE folded egg mixture
+    EAT
+  END
+
+  b.)
+  DEF TIP(BILL, QUALITY OF SERVICE)
+    IF QUALITY OF SERVICE is normal
+      RETURN BILL * 0.2
+    ELSE IF QUALITY OF SERVICE is exemplary
+      RETURN BILL * 0.25
+    ELSE
+      RETURN BILL * 0.15 + meaningful eye contact with server
+    END IF
+  END
+
+  c.)
+  DEF COFFEE
+    ADD water to kettle
+    HEAT kettle
+    SET pour-over above cup
+    SET filter in pour-over
+    SET beans in grinder
+    GRIND beans
+    ADD ground beans to filter
+    REPEAT
+      wait
+    UNTIL kettle whistles
+    POUR water over ground beans
+    REPEAT
+      wait
+    UNTIL coffee drips into cup
+  END
