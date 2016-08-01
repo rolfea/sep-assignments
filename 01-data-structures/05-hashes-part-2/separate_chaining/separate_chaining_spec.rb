@@ -80,7 +80,7 @@ RSpec.describe SeparateChaining, type: Class do
       movies.resize
       expect(movies.size).to eq 12
     end
-
+  
     it "copies existing values properly when the array is resized" do
       movies = SeparateChaining.new(6)
       movies["A New Hope"] = "Average"

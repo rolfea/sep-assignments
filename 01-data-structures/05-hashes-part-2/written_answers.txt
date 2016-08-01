@@ -1,0 +1,36 @@
+2-Choice Hashing
+  This resolution strategy involves using a second hashing-function. In the event
+  of a collision, a second index will be generated with the alternative hashing-function,
+  which will be consulted as a potential index before resizing occurs.
+
+Hopscotch Hashing
+  This resolution strategy only uses a single hash-function. A hashed entry
+  will be assigned to the originally generated index or within a range
+  of a fixed size (H - 1) after that index.
+  This is achieved in the following way:
+  1. Beginning with the generated index, use the method of linear probing to find
+  the next available index (j).
+  2. If j is within H - 1 indices of i, place the entry there and return.
+  3. Find an item between i and j, also within H - 1 of j, that is below j. Assign y to j, which creates
+  a new space for i.
+  4. If no such item exists, or the H - 1 area is full, resize the hash.
+
+Robin Hood Hashing
+  Robin Hood Hashing also utilizes linear probing. It requires each entry to
+  track the initial bucket it was entered into so that the distance from its original
+  bucket (DIB) can be determined. The procedure is as follows:
+  1. Start with entry-x and begin linear probing at the determined hash index.
+  2. At each index, compare the entry x's DIB to the current entry's DIB. When the current entry's
+  DIB is less than entry-x's, insert x at that index. The current entry now becomes the swapped value.
+  3. This process continues with the new entry until an open index is found. If none is found, the hash is resized.
+
+My Own Collision Strategy
+  "Search From the Middle"
+  It would be interesting to try to implement a strategy that searched outward from the mid-point of an array.
+  It would require:
+  1. Find the midpoint of the array (array.size / 2)
+  2. Search forward 1 index from this point, then backwards 1, repeating until
+  an open index is found.
+
+  I think one immediate problem with this is that, while the beginning of the array is defined,
+  the length is technically infinite, so it would probably have some inherent bias towards the front end of it.

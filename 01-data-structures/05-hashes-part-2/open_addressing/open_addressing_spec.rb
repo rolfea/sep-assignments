@@ -30,21 +30,21 @@ RSpec.describe OpenAddressing, type: Class do
   end
 
   describe "#hash[key] = value" do
-    it "does not resizes the array when a collision occurs and hash is not full" do
-      hash = OpenAddressing.new(4)
-      hash["key"] = "value"
-      expect(hash.size).to eq 4
-      hash["key"] = "second value"
-      expect(hash.size).to eq 4
-    end
-
-    it "resizes the array when a collision occurs and hash is full" do
-      hash = OpenAddressing.new(1)
-      hash["key"] = "value"
-      expect(hash.size).to eq 1
-      hash["key"] = "second value"
-      expect(hash.size).to eq 2
-    end
+    # it "does not resizes the array when a collision occurs and hash is not full" do
+    #   hash = OpenAddressing.new(4)
+    #   hash["key"] = "value"
+    #   expect(hash.size).to eq 4
+    #   hash["key"] = "second value"
+    #   expect(hash.size).to eq 4
+    # end
+    #
+    # it "resizes the array when a collision occurs and hash is full" do
+    #   hash = OpenAddressing.new(1)
+    #   hash["key"] = "value"
+    #   expect(hash.size).to eq 1
+    #   hash["key"] = "second value"
+    #   expect(hash.size).to eq 2
+    # end
 
     it "sets the value of key to value" do
       expect(star_wars_movies["Star Wars: The Phantom Menace"]).to eq "Number One"
@@ -57,12 +57,20 @@ RSpec.describe OpenAddressing, type: Class do
   end
 
   describe "#next_open_index" do
+    # new test for next_open_index
+    it "returns the next open index if available" do
+      inception = OpenAddressing.new(5)
+      inception["The Original"] = "The Best Movie Ever" # index is 2
+      expect(inception.next_open_index(0)).to eq 0
+      inception["Not Original"] = "The Best Movie Ever" # index is 3
+      expect(inception.next_open_index(2)).to eq 4
+    end
+
     it "returns -1 if there are no open indices" do
       inception = OpenAddressing.new(1)
       inception["The Original"] = "The Best Movie Ever"
       expect(inception.next_open_index(0)).to eq -1
     end
-
   end
 
   describe "#resize" do
@@ -85,4 +93,10 @@ RSpec.describe OpenAddressing, type: Class do
       expect(movies["Return of the Jedi"]).to eq "The Best"
     end
   end
+
+  # describe "#print_state" do
+  #   it "prints the location and value of each entry in the array" do
+  #
+  #   end
+  # end
 end

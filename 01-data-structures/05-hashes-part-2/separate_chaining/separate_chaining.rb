@@ -15,11 +15,9 @@ class SeparateChaining
 
     # COLLISION!
     @items[i] != nil ? list = @items[i] : list = LinkedList.new
-
     list.add_to_tail(n)
     @items[i] = list
     @item_count = @item_count + 1
-
     # Resize the hash if the load factor grows too large
     if load_factor.to_f > max_load_factor.to_f
       resize
@@ -86,5 +84,17 @@ class SeparateChaining
     end
 
     @items = new_items
+  end
+
+  def print_state
+    (0..@items.size - 1).each do |i|
+      if @items[i] == nil
+        puts "#{i}: nil"
+      else
+        puts "#{i}: #{@items[i].value}"
+      end
+    end
+
+    puts "Load Factor: #{load_factor}"
   end
 end
