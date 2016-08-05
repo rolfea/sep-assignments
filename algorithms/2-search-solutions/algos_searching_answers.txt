@@ -1,0 +1,16 @@
+1. Because there are 7 entries from A to G, it would take 7 iterations to find G, the 7th value.
+
+2. It would only take 3 iterations to find G using a binary search.
+
+3. 0 1 1 2 3 5 8 13 21 34 55 89
+
+4. When dealing with an unsorted collection, a binary search will not be useful
+because there is a chance of losing the target value during the implementation of
+the algorithm. A linear search would be the only strategy that can guarantee that a
+value is found in an unsorted collection.
+
+5. In a sorted collection of one million items, a binary search implemented iteratively
+would be my choice. The binary search is a faster means to finding a value in a sorted
+collection of values, and based on my benchmark testing of the two implementations,
+an iterative solution will be faster due to the performance drains introduced by calling a method
+multiple times.
