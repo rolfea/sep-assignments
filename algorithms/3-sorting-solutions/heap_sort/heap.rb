@@ -12,11 +12,9 @@ class MaxHeap
     end
   end
 
-  def max _heapify(array, index)
+  def max_heapify(array, index)
     left_child = left_child_value(array, index)
-    puts "left_child: #{left_child}"
     right_child = right_child_value(array, index)
-    puts "right_child: #{right_child}"
 
     if !left_child.nil? && left_child > array[index]
       array[index], array[left_child_index(index)] = array[left_child_index(index)], array[index]

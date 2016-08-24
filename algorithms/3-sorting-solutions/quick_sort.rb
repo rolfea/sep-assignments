@@ -4,7 +4,7 @@ def quick_sort(array, start, finish)
     quick_sort(array, start, p_index - 1)
     quick_sort(array, p_index + 1, finish)
   end
-  return array
+  array
 end
 
 def partition(array, start, finish)
@@ -17,8 +17,5 @@ def partition(array, start, finish)
     end
   end
   array[p_index], array[finish] = array[finish], array[p_index]
-  return p_index
+  p_index
 end
-
-test_array = [22, 2, 3, 9, 5, 11, 7]
-print quick_sort(test_array, 0, test_array.length - 1)
