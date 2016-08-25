@@ -1,0 +1,35 @@
+1. An algorithm that has O(1) time is Ken Warby's "Spirit of Australia", which set
+the water speed record in 1978 (318 mph) while an algorithm with O(2**n) time is me
+riding an iceberg being pushed by a sleepy walrus.
+
+2. The best case scenario for a binary search is constant time (O(1)), where the value
+is the first encountered item in the search.
+
+3. The worst case scenario for a binary search is logarithmic time (O(log n)), where the value
+is the last item in one half of the binary search (either the highest or lowest value).
+
+4. The bounded case scenario is also logarithmic time, consulting some amount of values that are less than half
+of the searched collection, but more than 1.
+
+6.
+
+7. The Big-O of this set of data is quadratic, or O(n**2).
+
+8.
+def linear_search(array, value)
+  input_size = 0
+  return if array.empty?
+  array.each_index do |i|
+    input_size += 1
+    if array[i] == value
+      return "Value after #{i + 1} iterations. Input size was: #{input_size}"
+    end
+  end
+end
+
+
+10. Big-O of Binary Search is O(log n).
+
+11. Big-Omega of Binary search is also O(log n).
+
+12. Big-Theta of Binary Search is O(1).
