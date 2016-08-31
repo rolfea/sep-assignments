@@ -32,19 +32,6 @@ class LinkedList
     @tail.next = nil
   end
 
-  # This method prints out a representation of the list.
-  def print
-    current_node = @head
-    # if I rework this so the puts is elsewhere,
-    # I can replace with the method advance_through_list_until_next_is(nil)
-    until current_node.next.nil?
-      puts current_node.data
-      current_node = current_node.next
-    end
-    puts @tail.data
-  end
-
-
   def return_single(element_location)
     current_node = @head
     # use 0
@@ -89,7 +76,8 @@ class LinkedList
     @head = node
   end
 
-  # This method removes and returns the first node in the Linked List and must set Linked List's head to the second node.
+  # This method removes and returns the first node in the Linked List and must
+  # set Linked List's head to the second node.
   def remove_front
     removed_head = @head
     if @head.next == nil
