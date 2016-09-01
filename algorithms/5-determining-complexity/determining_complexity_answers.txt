@@ -12,24 +12,33 @@ The first thing I look at with this algorithm is the outer loop, which iterates 
 of the collection, or n times, so my baseline is a linear runtime. The inner loop performs
 the same linear search on each array in the collection, so worst case scenario would be
 on in which the last item in the last array was the largest value. Since the time is
-based on two separate linear relationships, we would add those together.
+based on two separate linear relationships, we would multiply those together.
 
-4. O(n**2)
-This algorithm makes recursive calls to itself. If we take the first two comparisons (to zero and one) to
-be constants and ignore those in our classification, we can count the number of operations
-in the recursive calls as n increases. Each time we increase n, we must call the method n times,
-so the run time is quadratic.
+4.
 
 A table of the number of operations relative to the size of n looks like this:
-n | Operations
----------------------
-0   1
-1   2
-2   4
-3   8
-4   14
-5   24
-6   40
+n | L
+-----
+1,2
+2,7
+3,13
+4,24
+5,41
+6,69
+7,114
+8,187
+9,305
+10,496
+11,805
+12,1305
+13,2114
+14,3423
+15,5541
+16,8968
+17,14513
+18,23485
+19,38002
+20,61491
 
 5. O(n)
 This algorithm runs in linear time. Each time n increases, the number of operations increases by (n - 1) * 4.
