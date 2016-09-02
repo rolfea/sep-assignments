@@ -4,6 +4,8 @@ class LinkedList
   attr_accessor :head
   attr_accessor :tail
 
+  attr_reader :length
+
   # This method creates a new `Node` using `data`, and inserts it at the end of the list.
   def add_to_tail(node)
     if @head.nil?
@@ -34,13 +36,13 @@ class LinkedList
 
   def return_single(element_location)
     current_node = @head
-    # use 0
-    counter = 1
+    counter = 0
+    
     until counter == element_location
       current_node = current_node.next
       counter += 1
     end
-    current_node.next
+    current_node
   end
 
   # This method removes `node` from the list and must keep the rest of the list intact.
