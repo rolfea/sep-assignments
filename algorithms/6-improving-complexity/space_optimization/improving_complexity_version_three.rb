@@ -21,7 +21,7 @@ def merge(node1, node2)
     node2
   elsif node2.nil?
     node1
-  elsif node1.data < nodd2.data
+  elsif node1.data < node2.data
 
 end
 
