@@ -1,0 +1,61 @@
+1. An algorithm that has O(1) time is Ken Warby's "Spirit of Australia", which set
+the water speed record in 1978 (318 mph) while an algorithm with O(2**n) time is me
+riding an iceberg being pushed by a sleepy walrus.
+
+2. The best case scenario for a binary search is constant time (O(1)), where the value
+is the first encountered item in the search.
+
+3. When I tracked the size-to-operations of the binary search algorithm, I got
+the following table:
+n | L
+-----
+1  2
+2  2
+3  4
+4  4
+5  6
+6  6
+7  6
+8  8
+9  8
+10 8
+11 8
+12 8
+13 8
+14 8
+15 8
+16 10
+17 10
+18 10
+19 10
+20 10
+
+This show the number of operations increasing by 2 with decreasing frequency as n increases.
+This in particular doesn't exactly match any of the Big-O runtime descriptions as I understand them, but
+seems closest to linear time, where the operations increase in direct proportion to the size of the collection.
+
+4. The bounded case scenario is also logarithmic time, consulting some amount of values that are less than half
+of the searched collection, but more than 1.
+
+6. The limit for this data is logarithmic.
+
+7. The Big-O of this set of data is O(log n).
+
+8.
+def linear_search(array, value)
+  input_size = 0
+  return if array.empty?
+  array.each_index do |i|
+    input_size += 1
+    if array[i] == value
+      return "Value after #{i + 1} iterations. Input size was: #{input_size}"
+    end
+  end
+end
+
+
+10. Big-O of Binary Search is O(log n).
+
+11. Big-Omega of Binary search is also O(1).
+
+12. Big-Theta of Binary Search is O(log n).
