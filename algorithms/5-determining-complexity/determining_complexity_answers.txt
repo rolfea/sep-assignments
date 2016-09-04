@@ -1,0 +1,38 @@
+1. O(1)
+This algorithm accesses n as a constant. It immediately accesses n without any
+further iterations required as n increases.
+
+2. O(n)
+This algorithm operates in linear time. Each time the function runs, it will access
+every item in the collection, so as the collection size increases, the running time
+will increase in a 1-to-1 proportion.
+
+3. O(n * m)
+The first thing I look at with this algorithm is the outer loop, which iterates for each entry
+of the collection, or n times, so my baseline is a linear runtime. The inner loop performs
+the same linear search on each array in the collection, so worst case scenario would be
+on in which the last item in the last array was the largest value. Since the time is
+based on two separate linear relationships, we would multiply those together.
+
+4. After walking through the problem with Cyle, we showed that the run time for this algorithm is exponential.
+O(2**n)
+
+
+5. O(n)
+This algorithm runs in linear time. Each time n increases, the number of operations increases by (n - 1) * 4.
+
+n | Operations
+---------------------
+0   0
+1   0
+2   4
+3   8
+4   12
+5   16
+6   20
+
+6. O(n**2)
+This algorithm has a while-loop, which runs in linear time, followed by two recursive calls
+to each half of the partitioned collection, which I would understand to be a quadratic run time.
+This would produce O(n + n**2), and since we are able to drop constants in this analysis, we can simply express
+the runtime as O(n**2).
