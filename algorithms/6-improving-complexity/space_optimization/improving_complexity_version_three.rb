@@ -15,24 +15,21 @@ def sort_list(head_node)
   merge(sort_list(head_node), sort_list(head_of_second_half)
 end
 
-def merge(node1, node2)
-  pointer_node = Node.new
-  if node1.nil?
-    node2
-  elsif node2.nil?
-    node1
-  elsif node1.data < node2.data
+def merge(list_1, list_2)
+  merged_list = Node.new
 
+  if list_1.data.nil?
+    list_2
+  elsif list_2.data.nil?
+    list_1
+  end
+
+  if list_1.data <= list_2.data
+    merged_list = list_1
+    merged_list.next = merge(list_1.next, list_2)
+  else
+    merged_list = list_2
+    merged_list.next = merge(list_1, list_2.next)
+  end
+  return merged_list
 end
-
-def merge(left, right)
-   if left.empty?
-     right
-   elsif right.empty?
-     left
-   elsif left.first < right.first
-     [left.first] + merge(left[1..left.length], right)
-   else
-     [right.first] + merge(left, right[1..right.length])
-   end
- end

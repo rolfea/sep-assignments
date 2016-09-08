@@ -37,7 +37,7 @@ class LinkedList
   def return_single(element_location)
     current_node = @head
     counter = 0
-    
+
     until counter == element_location
       current_node = current_node.next
       counter += 1
