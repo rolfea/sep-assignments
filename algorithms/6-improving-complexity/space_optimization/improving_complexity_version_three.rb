@@ -31,16 +31,17 @@ def merge(list_1, list_2)
   return merged_list
 end
 
+# fix to be recursive
 def get_middle_node(head_node)
   slow_pointer = head_node
   fast_pointer = head_node.next
 
-  if fast_pointer.data != nil
+  while fast != nil
     fast_pointer = fast_pointer.next
-  end
-  if fast_pointer != nil
-    fast_pointer = fast_pointer.next
-    slow_pointer = slow_pointer.next
+    if fast_pointer != nil
+      slow_pointer = slow_pointer.next
+      fast_pointer = fast_pointer.next
+    end
   end
   slow_pointer
 end
